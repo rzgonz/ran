@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+kapt {
+    generateStubs = true
+}
+
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //kotlin
+    api kotlinLib.version
+
+    //androidX
+    // ANDROIDX
+    api androidxDependencies.coreKtx
+    api androidxDependencies.appCompat
+    api androidxDependencies.cardView
+    api androidxDependencies.constraintLayout
+    api androidxDependencies.gridLayout
+    api androidxDependencies.swipeRefresh
+    api androidxDependencies.legacyV4
+    api androidxDependencies.viewPager
+    api androidxDependencies.exifInterface
+    api androidxDependencies.vectorDrawable
+    api androidxDependencies.multidex
+    api androidxDependencies.material
+
+    // WORK MANAGER
+    api androidxDependencies.work.workRuntimeKtx
+
+
+    //libs
+    api library.calligraphy
+
+    //network
+    api network.retrofit
+    api network.uploadService
+    api network.retrofitGson
+    api network.retrofitAdapter
+    api network.retrofitInterceptor
+
+    //rxjava
+    api rx.kotlinCoroutines
+    api rx.rxAndroid
+    api rx.rxJava
+    api rx.rxPermission
+
+    //glide
+    api glide.core
+    kapt glide.compiler
+    api glide.transform
+    api glide.gpu
+    //dagger
+    api dagger.core
+    api dagger.androidCore
+    kapt dagger.compiler
+    kapt dagger.androidCompiler
+}

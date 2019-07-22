@@ -1,0 +1,101 @@
+ext {
+//android
+    multidex = '2.0.1'
+    buildToolsVersion = '28.0.3'
+    compileSdkVersion = 28
+    minSdkVersion = 19
+    targetSdkVersion = 28
+    firebaseVersion = '11.8.0'
+
+    //Android X
+    xAppCompatVersion = "1.1.0-alpha04"
+    xCardViewVersion = "1.0.0"
+    xExifInterfaceVersion = "1.0.0"
+    xVectorDrawableVersion = "1.0.1"
+    xGridLayoutVersion = "1.0.0"
+    xMultidexVersion = "2.0.1"
+    xLegacyV4Version = "1.0.0"
+    xConstraintLayoutVersion = "1.1.3"
+    xViewPagerVersion = "1.0.0"
+    xSwipeRefreshVersion = "1.1.0-alpha01"
+    googleMaterial ="1.0.0"
+    coreKtxVersion = "1.1.0-alpha05"
+    workManagerVersion = "2.0.0"
+
+//kotlin
+    kotlin_version = '1.3.41'
+    kotlinCoroutines = '1.3.0-M2'
+//network
+    retrofit = '2.4.0'
+    interceptor = '3.8.1'
+    uploadService = '3.4.2'
+//db
+    dbFlow = "4.1.1"
+//rx
+    rxJava = "2.2.0"
+    rxAndroid = "2.1.1"
+    rxPermission = "0.10.2"
+//image
+    glideVersion = '4.9.0'
+    glideTransform = '3.1.1'
+    gpuImage = "1.4.1"
+//text
+    calligraphy = '2.3.0'
+//dagger
+    dagger = "2.15"
+
+    kotlinLib = [version: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"]
+
+    androidxDependencies = [
+            appCompat       : "androidx.appcompat:appcompat:$xAppCompatVersion",
+            cardView        : "androidx.cardview:cardview:$xCardViewVersion",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$xConstraintLayoutVersion",
+            gridLayout      : "androidx.gridlayout:gridlayout:$xGridLayoutVersion",
+            legacyV4        : "androidx.legacy:legacy-support-v4:$xLegacyV4Version",
+            exifInterface   : "androidx.exifinterface:exifinterface:$xExifInterfaceVersion",
+            vectorDrawable  : "androidx.vectordrawable:vectordrawable:$xVectorDrawableVersion",
+            multidex        : "androidx.multidex:multidex:$xMultidexVersion",
+            coreKtx         : "androidx.core:core-ktx:$coreKtxVersion",
+            material        : "com.google.android.material:material:$googleMaterial",
+            viewPager       : "androidx.viewpager:viewpager:$xViewPagerVersion",
+            swipeRefresh    : "androidx.swiperefreshlayout:swiperefreshlayout:$xSwipeRefreshVersion",
+            work            : [
+                    workRuntime   : "androidx.work:work-runtime:$workManagerVersion",
+                    workRuntimeKtx: "androidx.work:work-runtime-ktx:$workManagerVersion",
+                    workRx        : "androidx.work:work-rxjava2:$workManagerVersion",
+            ],
+    ]
+
+    dagger = [
+            core           : "com.google.dagger:dagger:$dagger",
+            compiler       : "com.google.dagger:dagger-compiler:$dagger",
+            androidCore    : "com.google.dagger:dagger-android-support:$dagger",
+            androidCompiler: "com.google.dagger:dagger-android-processor:$dagger"
+    ]
+    glide = [
+            core     : "com.github.bumptech.glide:glide:$glideVersion",
+            compiler : "com.github.bumptech.glide:compiler:$glideVersion",
+            transform: "jp.wasabeef:glide-transformations:$glideTransform",
+            gpu      : "jp.co.cyberagent.android.gpuimage:gpuimage-library:$gpuImage"]
+
+    library = [
+            calligraphy: "uk.co.chrisjenx:calligraphy:$calligraphy"
+    ]
+
+    rx = [
+            kotlinCoroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutines",
+            rxAndroid       : "io.reactivex.rxjava2:rxandroid:$rxAndroid",
+            rxJava          : "io.reactivex.rxjava2:rxkotlin:$rxJava",
+            rxPermission    : "com.github.tbruyelle:rxpermissions:$rxPermission"
+    ]
+
+    network = [
+            retrofit           : "com.squareup.retrofit2:retrofit:$retrofit",
+            uploadService      : "net.gotev:uploadservice:$uploadService",
+            retrofitGson       : "com.squareup.retrofit2:converter-gson:$retrofit",
+            retrofitAdapter    : "com.squareup.retrofit2:adapter-rxjava2:$retrofit",
+            retrofitInterceptor: "com.squareup.okhttp3:logging-interceptor:$interceptor",
+    ]
+
+
+}
