@@ -1,12 +1,7 @@
 package id.rzgonz.ran.kotlin
 
-import android.app.Application
-import com.google.gson.Gson
-import dagger.BindsInstance
 import dagger.Component
 import id.rzgonz.ran.ExpensiveObject
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
 import javax.inject.Singleton
 
 @Component(modules = [AppModule::class])
@@ -21,7 +16,8 @@ interface CoreComponent {
 //        fun build(): CoreComponent
 //    }
 
-    fun getExpensiveObject(): ExpensiveObject
+    //    fun getprovideSchedulerProvider():SchedulerProvider
+//    fun getExpensiveObject(): ExpensiveObject
 
     fun inject(baseApplication: BaseApplication)
 //    fun getprovideSchedulerProvider():SchedulerProvider

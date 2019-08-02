@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="id.rzgonz.rubel">
+
+    <activity android:name="id.rzgonz.sampelmodule.SampleMainActivity"
+              android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+</manifest>

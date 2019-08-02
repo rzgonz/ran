@@ -1,1 +1,1 @@
-include ':app', ':ran', ':sampelmodule'
+include ':app', ':ran', ':sampelmodule', ':rubel'

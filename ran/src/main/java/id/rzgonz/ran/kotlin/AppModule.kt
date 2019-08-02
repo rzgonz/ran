@@ -21,9 +21,9 @@ import javax.inject.Singleton
 
 @Module
 class AppModule {
-    @Provides
-    @Singleton
-    fun provideExpensiveObject(): ExpensiveObject = ExpensiveObject()
+//    @Provides
+//    @Singleton
+//    fun provideExpensiveObject(): ExpensiveObject = ExpensiveObject()
 
     @Provides
     @Singleton

@@ -20,9 +20,5 @@ class AndroidApp : BaseApplication() {
         DaggerFeature1Component.builder().application(this).build().inject(this)
     }
 
-//    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-//        return null
-//    }
-
     override fun activityInjector(): AndroidInjector<Activity> = activityDispatchingAndroidInjector
 }
